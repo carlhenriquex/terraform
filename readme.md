@@ -1,3 +1,4 @@
+# Terraform
 O que você DEVE commitar:
 
 main.tf (e outros arquivos .tf de código)
