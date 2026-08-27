@@ -1,7 +1,12 @@
 variable "region" {
+    description = "Regiao onde os arquivos serao criados"
     default = "sa-east-1"
     type = string
-    description = "Regiao onde os arquivos serao criados"
+
+    validation {
+        condition = contains(["us-east-1", "us-east-2", "us-west-2", "sa-east-1"], var.region)
+        error_message = "Região inválida. Escolha entre: us-east-1, us-east-2, us-west-2 ou sa-east-1."
+    }
 }
 
 variable "bucket_name" {
